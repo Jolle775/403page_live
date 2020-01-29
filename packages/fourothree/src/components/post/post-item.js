@@ -125,7 +125,7 @@ box-shadow: 0px 10px 30px 0px rgba(20,3,67,.08);
 
 export const PostHeader = styled.header`
   text-align: center;
-  padding: 40px;
+  padding: 40px 1px;
   background: -webkit-linear-gradient(to right, #89216B, #DA4453); 
   background: linear-gradient(to right, #89216B, #DA4453); 
     :hover {
@@ -147,7 +147,7 @@ export const SectionContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: calc(100% - 4rem);
-  min-height: 110px;
+  min-height: 10px;
   max-width: ${getMaxWidth};
   
 
@@ -177,7 +177,7 @@ const PostLink = styled(Link)`
 export const PostInner = styled(SectionContainer)`
   padding-top: 5rem;
   @media (min-width: 700px) {
-    padding-top: 0rem;
+    padding-top: 2rem;
   }
 `;
 

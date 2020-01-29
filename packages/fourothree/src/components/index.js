@@ -68,7 +68,7 @@ grid-template-columns: repeat( auto-fit, minmax(45%, 1fr) );
 grid-auto-rows: auto;
 grid-gap: 5rem;
 margin: 45px auto;
-padding: 0 140px;
+padding: 0 10%;
 max-width: 1600px;
 @media (max-width: 1000px) {
     grid-template-columns: repeat(1, 1fr);

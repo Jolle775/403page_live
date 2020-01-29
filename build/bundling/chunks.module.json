@@ -2,19 +2,22 @@
   "errors": [],
   "warnings": [],
   "version": "4.41.5",
-  "hash": "4cb437b944a562347ded",
+  "hash": "2dbd991b232ee6e35cfa",
   "publicPath": "/static/",
   "outputPath": "/Users/garethoshea/403page2020/build/static",
   "assetsByChunkName": {
     "403page2020": "403page2020.module.js",
     "archive": "archive.module.js",
-    "archive~post": "archive~post.module.js",
+    "archive~post": [
+      "archive~post.module.js",
+      "archive~post.4968215fbc7d0c71bbdd.hot-update.js"
+    ],
     "post": "post.module.js"
   },
   "assets": [
     {
       "name": "403page2020.module.js",
-      "size": 6059976,
+      "size": 6059966,
       "chunks": [
         "403page2020"
       ],
@@ -22,6 +25,17 @@
         "403page2020"
       ],
       "info": {},
+      "emitted": false
+    },
+    {
+      "name": "4968215fbc7d0c71bbdd.hot-update.json",
+      "size": 54,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
       "emitted": false
     },
     {
@@ -37,8 +51,23 @@
       "emitted": false
     },
     {
+      "name": "archive~post.4968215fbc7d0c71bbdd.hot-update.js",
+      "size": 74623,
+      "chunks": [
+        "archive~post"
+      ],
+      "chunkNames": [
+        "archive~post"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "archive~post.module.js",
-      "size": 156306,
+      "size": 156342,
       "chunks": [
         "archive~post"
       ],
@@ -148,6 +177,7 @@
       ],
       "assets": [
         "archive~post.module.js",
+        "archive~post.4968215fbc7d0c71bbdd.hot-update.js",
         "archive.module.js"
       ],
       "children": {},
@@ -160,6 +190,7 @@
       ],
       "assets": [
         "archive~post.module.js",
+        "archive~post.4968215fbc7d0c71bbdd.hot-update.js",
         "post.module.js"
       ],
       "children": {},
