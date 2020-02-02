@@ -62,7 +62,7 @@ const Theme = ({ state, libraries }) => {
             (data.is404 && <Page404 />)}
         </Main>
       </div>
-      <div style={{ minHeight: "96px", padding:"0% 10%" }}><Pagination /></div> 
+      <div style={{ minHeight: "96px", padding:"0% 10%", maxWidth:"1600px", margin:"45px auto"}}><Pagination /></div> 
       <Footer />
     </>
   );

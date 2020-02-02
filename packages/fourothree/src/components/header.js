@@ -25,19 +25,19 @@ const Header = ({ state }) => {
     <PageHeader bg={headerBg} id="site-header">
       <HeaderInner>
         <TitleWrapper>
-          {/* Search button on mobile */}
-          {state.theme.showSearchInHeader && <MobileSearchButton />}
 
           {/* Heading and Description of the site */}
           <TitleGroup>
           <StyledLink link="/">
-      <SiteTitle><img src={Logoimg} width="90px" height="" /></SiteTitle>
+      <SiteTitle><img src={Logoimg} width="162px" height="" /></SiteTitle>
     </StyledLink>
           </TitleGroup>
 
           {/* Mobile menu button and modal */}
           <MobileMenuButton />
           <MobileMenuModal />
+          {/* Search button on mobile */}
+          {state.theme.showSearchInHeader && <MobileSearchButton />}
         </TitleWrapper>
 
         <HeaderNavigationWrapper>
@@ -70,7 +70,7 @@ const TitleWrapper = styled.div`
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 0 4rem;
+  padding: 0 1rem;
   text-align: center;
   width: 100%;
 
@@ -92,14 +92,22 @@ box-shadow: 0px 0px 3px #c1c1c1;
 position: sticky;
 top: 0;
 z-index: 10;
+background-color:black;
+width:100%;
+height:120px;
+background: linear-gradient(to bottom right, #fff 0%, #fff 50%, #f9f9f9 50%, #f9f9f9 100%);
+
+  @media (max-width:998px) {
+    height:120px;
+  }
 `;
 
 const HeaderInner = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 2.8rem 0;
-  max-width: 168rem;
+  padding: 2.8rem 10%;
+  max-width: 110rem;
   z-index: 100;
   margin-left: auto;
   margin-right: auto;
@@ -116,7 +124,7 @@ const SiteTitle = styled.h1`
   margin: 0;
 
   @media (min-width: 1000px) {
-    margin: 1rem 0 0 2.4rem;
+    margin: 1rem 0 0 1rem;
   }
   @media (min-width: 700px) {
     font-size: 2.4rem;

@@ -24,6 +24,7 @@ export const BaseToggle = styled.button`
   overflow: visible;
   padding: 0 2rem;
   color: #000000;
+  max-height: 100px;
 
   &:hover {
     text-decoration: underline;
@@ -54,11 +55,12 @@ export const BaseToggle = styled.button`
 export const NavToggle = styled(BaseToggle)`
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 4rem;
   top: 0;
   width: 6.6rem;
+  display: none;
 
-  @media (min-width: 700px) {
+  @media (min-width: 1000px) {
     right: 2rem;
   }
 `;
@@ -91,13 +93,19 @@ export const CloseNavToggle = styled(BaseToggle)`
 
 // Used for the search toggle button on Mobile
 export const SearchToggle = styled(BaseToggle)`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
+height: auto;
+padding: 0 20px;
+position: absolute;
+margin: 0 40px;
+display: block;
+top: 7rem;
 
-  @media (min-width: 700px) {
+
+  @media (min-width: 1000px) {
     left: 2rem;
+  }
+  @media (max-width: 359px) {
+    display: none;
   }
 `;
 

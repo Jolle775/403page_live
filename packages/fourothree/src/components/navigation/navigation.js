@@ -61,13 +61,14 @@ const Menu = styled.ul`
     margin-right: 0px;
     margin-bottom: 0px;
     margin-left: -2.5rem;
+    
   }
 `;
 
 const MenuItem = styled.li`
 padding: 0;
   float: bottom;
-  margin: 0px 20px;
+  margin: 0px 18px;
   color: #353535;
   font-weight: 700;
   box-sizing: border-box;

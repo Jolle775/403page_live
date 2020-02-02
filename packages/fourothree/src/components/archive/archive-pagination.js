@@ -74,18 +74,22 @@ grid-gap: 5rem;
 
 const Text = styled.div`
 display: inline-block;
-border-radius: 4px;
-background-color: #cd2653;
+border-radius: 1px;
+background: -webkit-linear-gradient(to top, #89216B, #DA4453); 
+background: linear-gradient(to top, #89216B, #DA4453); 
 border: none;
 color: #FFFFFF;
 text-align: center;
 font-size: 28px;
 float: right;
 padding: 20px;
-width: 40%;
+width: 42%;
+-webkit-transition: all 0.5s;
 transition: all 0.5s;
 cursor: pointer;
-margin: 5%;
+margin: 4%;
+max-width: 1600px;
+border-radius: 4px;
 
 `;
 
