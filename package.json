@@ -21,6 +21,7 @@
     "@frontity/wp-source": "^1.5.0",
     "fourothree": "file:packages/fourothree",
     "frontity": "^1.4.4",
+    "react-ga": "^2.7.0",
     "react-sharingbuttons": "^1.0.0"
   }
 }

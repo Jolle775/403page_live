@@ -8,11 +8,19 @@ import MobileSearchButton from "./mobile/search-button";
 import MobileMenuButton from "./mobile/menu-button";
 import MobileMenuModal from "./mobile/menu-modal";
 import Logoimg from './403logo.png';
+import ReactGA from 'react-ga';
+
+function initializeReactGA() {
+  ReactGA.initialize('UA-107576142-9');
+  ReactGA.pageview('/homepage');
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
 
 const Header = ({ state }) => {
   const { title, description } = state.frontity;
   const { headerBg } = state.theme.colors;
 
+  
   return (
     <PageHeader bg={headerBg} id="site-header">
       <HeaderInner>

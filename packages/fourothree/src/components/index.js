@@ -4,6 +4,7 @@ import Footer from "./footer";
 import globalStyles from "./styles/global-styles";
 import Header from "./header";
 import Archive from "./archive";
+import Pagination from "./archive/archive-pagination";
 import Loading from "./loading";
 import Page404 from "./page-404";
 import Post from "./post";
@@ -11,10 +12,17 @@ import SearchResults from "./search/search-results";
 import SkipLink from "./styles/skip-link";
 import MetaTitle from "./page-meta-title";
 
+import ReactGA from 'react-ga';
+
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
+function initializeReactGA() {
+  ReactGA.initialize('UA-107576142-9');
+  ReactGA.pageview('/homepage');
+}
+
 const Theme = ({ state, libraries }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
@@ -54,7 +62,7 @@ const Theme = ({ state, libraries }) => {
             (data.is404 && <Page404 />)}
         </Main>
       </div>
-
+      <div style={{ minHeight: "96px", padding:"0% 10%" }}><Pagination /></div> 
       <Footer />
     </>
   );
@@ -73,4 +81,7 @@ max-width: 1600px;
 @media (max-width: 1000px) {
     grid-template-columns: repeat(1, 1fr);
 }
+`;
+
+const Pagiboi = styled.div`
 `;

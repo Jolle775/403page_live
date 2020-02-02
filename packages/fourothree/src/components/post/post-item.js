@@ -5,8 +5,7 @@ import FeaturedMedia from "./featured-media";
 import PostMeta from "./post-meta";
 import PostCategories from "./post-categories";
 import PostTags from "./post-tags";
-import Facebook from 'react-sharingbuttons/dist/buttons/Facebook';
-import 'react-sharingbuttons/dist/main.css';
+
 
 /**
  * Article Component
@@ -175,7 +174,7 @@ const PostLink = styled(Link)`
 `;
 
 export const PostInner = styled(SectionContainer)`
-  padding-top: 5rem;
+  padding-top: 2rem;
   @media (min-width: 700px) {
     padding-top: 2rem;
   }

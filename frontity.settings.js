@@ -3,7 +3,7 @@ const settings = {
   "state": {
     "frontity": {
       "url": "https://403page.com",
-      "title": "Indestructible Uptime | 403Page.com",
+      "title": "403Page.com",
       "description": "Blazing-edge Wordpress development"
     }
   },

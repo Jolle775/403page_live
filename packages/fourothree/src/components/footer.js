@@ -32,7 +32,6 @@ const Footer = ({ state }) => {
       <SiteFooterInner>
         <Credits>
           <Copyright>
-            &copy; {currentYear}{" "}
             <Link link={state.frontity.url}>{state.frontity.title}</Link>
           </Copyright>
           <PoweredBy>Powered by Frontity</PoweredBy>

@@ -2,7 +2,7 @@ import { connect } from "frontity";
 import React, { Fragment, useEffect } from "react";
 import Article from "../post/post-item";
 import ArchiveHeader from "./archive-header";
-import Pagination from "./archive-pagination";
+
 import PostSeparator from "../post/post-separator";
 import Post from "../post";
 
@@ -52,8 +52,7 @@ const Archive = ({ state, showExcerpt, showMedia }) => {
           </Fragment>
         );
       })}
-      <Pagination />
-    </>
+    </> 
   );
 };
 

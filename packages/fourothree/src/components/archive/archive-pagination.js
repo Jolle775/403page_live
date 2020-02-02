@@ -41,22 +41,20 @@ const Pagination = ({ state, actions, libraries }) => {
   }, []);
 
   return (
-    <div>
+    <div class="pagi">
       {/* If there's a next page, render this link */}
+      {/* If there's a previous page, render this link */}
       {isThereNextPage && (
         <Link link={nextPageLink}>
-          <Text>← Older posts</Text>
+          <Text>→</Text>
         </Link>
       )}
-
-      {isTherePreviousPage && isThereNextPage && " - "}
-
-      {/* If there's a previous page, render this link */}
       {isTherePreviousPage && (
         <Link link={prevPageLink}>
-          <Text>Newer posts →</Text>
+          <Text>←</Text>
         </Link>
       )}
+
     </div>
   );
 };
@@ -67,7 +65,36 @@ const Pagination = ({ state, actions, libraries }) => {
  */
 export default connect(Pagination);
 
-const Text = styled.em`
-  display: inline-block;
-  margin-top: 16px;
+const pagi = styled.div`
+display: grid;
+grid-template-columns: repeat( auto-fit,minmax(45%,1fr) );
+grid-auto-rows: auto;
+grid-gap: 5rem;
+`
+
+const Text = styled.div`
+display: inline-block;
+border-radius: 4px;
+background-color: #cd2653;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 28px;
+float: right;
+padding: 20px;
+width: 40%;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5%;
+
+`;
+
+const pagibuttonprev = styled.div`
+  float: left;
+  background-color: #000000;
+`;
+
+const pagibuttonnext = styled.div`
+float: right;
+
 `;
