@@ -46,6 +46,7 @@ const PostItem = ({
     <Post>
       <PostHeader>
         <SectionContainer>
+
           {/* If the post has categories, render the categories */}
           {/*item.categories && <PostCategories categories={categories} /> */}
 
@@ -102,21 +103,23 @@ background-color: #fff;
 -webkit-box-shadow: none;
 box-shadow: none;
 border-radius: 6px;
+border: 5px solid white;
+-webkit-box-shadow: none;
+box-shadow: none;
 
--webkit-box-shadow: 0px 10px 30px 0px rgba(20,3,67,.08);
-box-shadow: 0px 10px 30px 0px rgba(20,3,67,.08);
   :hover{
     border-radius: 6px;
     z-index: 0;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(20,3,67,.09);
+box-shadow: 0px 10px 30px 0px rgba(20,3,67,.09);
+
+    
   }
 
   &:first-of-type {
   }
 
   @media (min-width: 700px) {
-    
     &:first-of-type {
     }
   }
@@ -127,8 +130,8 @@ export const PostHeader = styled.header`
   padding: 40px 1px;
   background: -webkit-linear-gradient(to right, #89216B, #DA4453); 
   background: linear-gradient(to right, #89216B, #DA4453); 
+  border-radius: 6px 6px 0 0;
     :hover {
-
     }
   
 `;
@@ -148,8 +151,6 @@ export const SectionContainer = styled.div`
   width: calc(100% - 4rem);
   min-height: 10px;
   max-width: ${getMaxWidth};
-  
-
   @media (min-width: 700px) {
     width: calc(100% - 8rem);
     

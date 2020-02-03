@@ -8,6 +8,7 @@ import InterSemiBoldUS from "../../fonts/inter/Inter-SemiBold-US-ASCII.woff2";
 import InterMediumLatin from "../../fonts/inter/Inter-Medium-LATIN.woff2";
 import InterBoldLatin from "../../fonts/inter/Inter-Bold-LATIN.woff2";
 import InterSemiBoldLatin from "../../fonts/inter/Inter-SemiBold-LATIN.woff2";
+import ImageBG from './imagebg.png';
 
 const cssReset = css`
   html,
@@ -74,7 +75,11 @@ const documentSetup = colors => css`
   }
 
   body {
-    background: ${colors.bodyBg};
+    background-color: #F9F9F9;
+    background-image: url(static/images/imagebg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
     box-sizing: border-box;
     color: #ffffff;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, "Helvetica Neue",
@@ -82,6 +87,8 @@ const documentSetup = colors => css`
     font-size: 1.8rem;
     letter-spacing: -0.015em;
     text-align: left;
+    @media (max-width: 700px) {
+      background-position-y: 60px;
   }
 
   *,

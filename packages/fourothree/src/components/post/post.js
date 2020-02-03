@@ -13,6 +13,7 @@ import PostCategories from "./post-categories";
 import PostMeta from "./post-meta";
 import PostTags from "./post-tags";
 
+
 const Post = ({ state, actions, libraries }) => {
   // Get information about the current URL.
   const data = state.source.get(state.router.link);
@@ -51,9 +52,9 @@ const Post = ({ state, actions, libraries }) => {
   useEffect(() => {
     actions.source.fetch("/");
   }, []);
-
   // Load the post, but only if the data is ready.
   return data.isReady ? (
+    
     <PostArticle>
       <Header>
         <SectionContainer>

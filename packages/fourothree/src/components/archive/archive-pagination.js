@@ -41,7 +41,7 @@ const Pagination = ({ state, actions, libraries }) => {
   }, []);
 
   return (
-    <div class="pagi">
+    <div className="pagi">
       {/* If there's a next page, render this link */}
       {/* If there's a previous page, render this link */}
       {isThereNextPage && (

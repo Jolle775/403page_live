@@ -12,16 +12,12 @@ import SearchResults from "./search/search-results";
 import SkipLink from "./styles/skip-link";
 import MetaTitle from "./page-meta-title";
 
-import ReactGA from 'react-ga';
 
 /**
  * Theme is the root React component of our theme. The one we will export
  * in roots.
  */
-function initializeReactGA() {
-  ReactGA.initialize('UA-107576142-9');
-  ReactGA.pageview('/homepage');
-}
+
 
 const Theme = ({ state, libraries }) => {
   // Get information about the current URL.
@@ -51,15 +47,16 @@ const Theme = ({ state, libraries }) => {
       <div style={{ minHeight: "calc(100vh - 190px)" }}>
         {/* Add the header of the site. */}
         <Header />
-
         {/* Add the main section. It renders a different component depending
         on the type of URL we are in. */}
         <Main id="main">
+
           {(data.isFetching && <Loading />) ||
             (isSearch && <SearchResults />) ||
             (data.isArchive && <Archive />) ||
             (data.isPostType && <Post />) ||
             (data.is404 && <Page404 />)}
+            
         </Main>
       </div>
       <div style={{ minHeight: "96px", padding:"0% 10%", maxWidth:"1600px", margin:"45px auto"}}><Pagination /></div> 
@@ -78,10 +75,8 @@ grid-gap: 5rem;
 margin: 45px auto;
 padding: 0 10%;
 max-width: 1600px;
+
 @media (max-width: 1000px) {
     grid-template-columns: repeat(1, 1fr);
 }
-`;
-
-const Pagiboi = styled.div`
 `;
